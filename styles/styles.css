@@ -1,1 +1,71 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@charset "UTF-8";
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: #383E45;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+  color: #383E45;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  margin: 0;
+  width: 120px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.header__logo a {
+  margin: 0;
+  display: block;
+}
+
+.header__navigation {
+  line-height: 1;
+}
+
+.header__navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.header__navigation li {
+  list-style: none;
+  margin-left: 30px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
