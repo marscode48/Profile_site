@@ -7,7 +7,6 @@ Stylesheet: ベーススタイル
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   color: #383E45;
-  font-size: 0.9rem;
 }
 
 a {
@@ -15,19 +14,42 @@ a {
   color: #383E45;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   max-width: 100%;
   vertical-align: bottom;
 }
 
+.font-sm, .header, .main__about__profile__text p, .main__bicycle__introduce li p {
+  font-size: 0.9rem;
+}
+
+.font-md, .main__about__profile__text__name, .main__bicycle__introduce li .main__bicycle__introduce__title {
+  font-size: 1rem;
+}
+
+.font-lr, .main-title, .main__about__section-title, .main__bicycle__section-title {
+  font-size: 2rem;
+}
+
+.main-title, .main__about__section-title, .main__bicycle__section-title {
+  display: inline-block;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383E45;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  text-align: center;
 }
 
 .header {
   margin: 0 auto;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,5 +89,104 @@ img {
   list-style: none;
   margin-left: 30px;
   cursor: pointer;
+}
+
+.main {
+  margin: 0 auto 100px auto;
+}
+
+.main__visual {
+  margin-bottom: 80px;
+}
+
+.main__visual img {
+  width: 100%;
+  height: calc(100vh - 60px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__about {
+  margin: 0 auto 100px 0;
+  padding: 0 20px;
+}
+
+.main__about__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__about__profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.main__about__profile__text {
+  text-align: left;
+}
+
+.main__about__profile__text__name {
+  margin: 10px 0;
+}
+
+.main__about__profile__text p {
+  margin: 0;
+}
+
+.main__bicycle {
+  margin: 0 auto 100px 0;
+  padding: 0 20px;
+}
+
+.main__bicycle__introduce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main__bicycle__introduce li {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main__bicycle__introduce li .main__bicycle__introduce__title {
+  margin: 10px 0;
+}
+
+.main__bicycle__introduce li p {
+  margin: 0;
+}
+
+.footer {
+  padding: 10px 0;
+}
+
+.footer__copyright {
+  font-size: 0.5rem;
+}
+
+.footer__copyright p {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */

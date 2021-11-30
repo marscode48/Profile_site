@@ -4,28 +4,29 @@ Stylesheet: ベーススタイル
 
 ******************************************************************/
 body {
-    font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    color: $cBlack;
-    font-size: 0.9rem;
-    // line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: $cBlack;
 }
 a {
-    text-decoration: none;
-    color: $cBlack;
+  text-decoration: none;
+  color: $cBlack;
+}
+li {
+  list-style: none;
 }
 img {
-    max-width: 100%;
-    vertical-align: bottom;
+  max-width: 100%;
+  vertical-align: bottom;
 }
-// .font-sm {
-//     font-size: 14.4px;
-// }
-// .font-md {
-//     font-size: 16px;
-// }
-// .font-lr {
-//     font-size: 32px;
-// }
+.font-sm {
+  font-size: 0.9rem;
+}
+.font-md {
+  font-size: 1rem;
+}
+.font-lr {
+  font-size: 2rem;
+}
 // .mb-sm {
 // margin-bottom: 16px !important;
 // }
@@ -43,12 +44,12 @@ img {
 // margin: 0 auto;
 // max-width: $contentMaxWidth;
 // }
-// .main-title {
-// @extend .font-lg;
-// font-weight: 600;
-// margin-bottom: 0;
-// display: block;
-// }
+.main-title {
+  display: inline-block;
+  margin-bottom: 60px;
+  @extend .font-lr;
+  border-bottom: solid 1px $cBlack;
+}
 // .sub-title {
 // @extend .font-sm;
 // color: $cSubTitle;
@@ -59,44 +60,122 @@ img {
 // }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .header {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  @extend .font-sm;
+  margin: 0 auto;
+  padding: $containerPadding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    &__logo {
-        margin: 0;
-        width: 120px;
-        padding: 10px 0;
-        cursor: pointer;
-        & a {
-            margin: 0;
-            display: block;
-        }
+  &__logo {
+    margin: 0;
+    width: 120px;
+    padding: 10px 0;
+    cursor: pointer;
+    & a {
+      margin: 0;
+      display: block;
     }
+  }
 
-    &__navigation {
-        line-height: 1;
-        & ul {
-            display: flex;
-            padding: 10px 0;
-            margin: 0;
-        }
-        & li {
-            list-style: none;
-            margin-left: 30px;
-            cursor: pointer;
-        }
+  &__navigation {
+    line-height: 1;
+    & ul {
+      display: flex;
+      padding: 10px 0;
+      margin: 0;
     }
+    & li {
+      list-style: none;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+  }
 }
 
+.main {
+  margin: 0 auto 100px auto;
+  &__visual {
+    // width: 100%;
+    // margin: 0;
+    margin-bottom: 80px;
+    & img {
+      width: 100%;
+      height: calc(100vh - 60px);
+      object-fit: cover;
+    }
+  }
+  &__about {
+    margin: 0 auto 100px 0;
+    padding: $containerPadding;
+    &__section-title {
+      @extend .main-title;
+    }
+    &__profile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      &__text {
+        text-align: left;
+        &__name {
+          @extend .font-md;
+          margin: 10px 0;
+        }
+        p {
+          margin: 0;
+          @extend .font-sm;
+        }
+      }
+    }
+  }
+  &__bicycle {
+    margin: 0 auto 100px 0;
+    padding: $containerPadding;
+    &__section-title {
+      @extend .main-title;
+    }
+    &__introduce {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      padding: 0;
+      margin: 0;
 
+      & li {
+        width: 100%;
+        margin-bottom: 30px;
+        .main__bicycle__introduce__title {
+          @extend .font-md;
+          margin: 10px 0;
+        }
+        p {
+          margin: 0;
+          @extend .font-sm;
+        }
+      }
+    }
+  }
+}
 
-
-
+.footer {
+  padding: 10px 0;
+  &__copyright {
+    font-size: 0.5rem;
+    p {
+      margin: 0;
+    }
+  }
+}
