@@ -1,0 +1,34 @@
+.header {
+  max-width: $contentMaxWidth;
+}
+
+.main__visual img {
+  height: 600px;
+  max-width: 1920px;
+}
+
+.main__about {
+  max-width: $contentMaxWidth;
+  &__profile {
+    flex-direction: row;
+    & img {
+      margin-right: 30px;
+    }
+  }
+}
+
+.main__bicycle {
+  max-width: $contentMaxWidth;
+}
+.main__bicycle__introduce {
+  flex-direction: row;
+  justify-content: space-between;
+
+  & li {
+    width: 32%;
+  }
+    & img {
+      height: 71.6%;
+      object-fit: cover;
+    }
+}

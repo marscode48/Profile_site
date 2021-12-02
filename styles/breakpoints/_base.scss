@@ -102,8 +102,6 @@ img {
 .main {
   margin: 0 auto 100px auto;
   &__visual {
-    // width: 100%;
-    // margin: 0;
     margin-bottom: 80px;
     & img {
       width: 100%;
@@ -112,7 +110,7 @@ img {
     }
   }
   &__about {
-    margin: 0 auto 100px 0;
+    margin: 0 auto 100px auto;
     padding: $containerPadding;
     &__section-title {
       @extend .main-title;
@@ -141,7 +139,7 @@ img {
     }
   }
   &__bicycle {
-    margin: 0 auto 100px 0;
+    margin: 0 auto 100px auto;
     padding: $containerPadding;
     &__section-title {
       @extend .main-title;
@@ -149,19 +147,16 @@ img {
     &__introduce {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      // align-items: center;
       padding: 0;
       margin: 0;
-
       & li {
         width: 100%;
         margin-bottom: 30px;
-        .main__bicycle__introduce__title {
+        & h3 {
           @extend .font-md;
           margin: 10px 0;
         }
-        p {
+        & p {
           margin: 0;
           @extend .font-sm;
         }
